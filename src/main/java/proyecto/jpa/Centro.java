@@ -6,7 +6,6 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToMany;
 
 @Entity
 public class Centro implements Serializable{
@@ -25,9 +24,7 @@ public class Centro implements Serializable{
 	/**
 	 * Many-many con Titulacion
 	 */
-	//Relacion muchos a muchos con Titulacion
-	@ManyToMany
-	private Titulacion titulacionCentro;
+	
 	
 	
 	//Getters and Setters
