@@ -1,17 +1,19 @@
 package proyecto.jpa;
 
 import java.io.Serializable;
+import java.util.List;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
-public class Centro implements Serializable{
+public class Centro {
 
-	private static final long serialVersionUID = 1L;
-	@Id@GeneratedValue
+	
+	@Id
 	@Column(name="ID")
 	private Integer id;
 	@Column(name="NOMBRE")
@@ -21,11 +23,9 @@ public class Centro implements Serializable{
 	@Column(name="TELEFONO_CONSERJERIA")
 	private Long telefonoConserjeria;
 	
-	/**
-	 * Many-many con Titulacion
-	 */
 	
-	
+	@ManyToMany
+	private List<Titulacion> centroTitulacion;	
 	
 	//Getters and Setters
 

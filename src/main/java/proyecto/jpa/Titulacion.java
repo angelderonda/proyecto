@@ -19,14 +19,23 @@ public class Titulacion {
 	private Integer creditos;
 	
 	//Relacion uno a muchos con asignatura
-	@OneToMany(mappedBy="titulacionAsig")
-	private List<Asignatura> asignaturas;
+	@OneToMany(mappedBy="titulacionAsignatura")
+	private List<Asignatura> asignaturaTitulacion;
 	
 	//Relacion uno a muchos con expediente
-	@OneToMany(mappedBy="titulacionExp")
-	private List<Expediente> expedientes;
-
+	@OneToMany(mappedBy="titulacionExpediente")
+	private List<Expediente> expedienteTitulacion;
+	
+	//Relacion muchos a muchos con centro
+	@ManyToMany
+	private List<Centro> centroTitulacion;
+	
+	//Relacion uno a muchos con grupo
+	@OneToMany(mappedBy = "titulacionGrupo")
+	private List<Grupo> grupoTitulacion;
+	
 	//Getters y Setters
+	
 	public Long getCodigo() {
 		return codigo;
 	}
@@ -35,7 +44,6 @@ public class Titulacion {
 		this.codigo = codigo;
 	}
 
-	
 	public String getNombre() {
 		return nombre;
 	}
@@ -52,30 +60,52 @@ public class Titulacion {
 		this.creditos = creditos;
 	}
 
-	public List<Asignatura> getAsignaturas() {
-		return asignaturas;
+	public List<Asignatura> getAsignaturaTitulacion() {
+		return asignaturaTitulacion;
 	}
 
-	public void setAsignaturas(List<Asignatura> asignaturas) {
-		this.asignaturas = asignaturas;
+	public void setAsignaturaTitulacion(List<Asignatura> asignaturaTitulacion) {
+		this.asignaturaTitulacion = asignaturaTitulacion;
 	}
 
-	public List<Expediente> getExpedientes() {
-		return expedientes;
+	public List<Expediente> getExpedienteTitulacion() {
+		return expedienteTitulacion;
 	}
 
-	public void setExpedientes(List<Expediente> expedientes) {
-		this.expedientes = expedientes;
+	public void setExpedienteTitulacion(List<Expediente> expedienteTitulacion) {
+		this.expedienteTitulacion = expedienteTitulacion;
+	}
+
+	public List<Centro> getCentroTitulacion() {
+		return centroTitulacion;
+	}
+
+	public void setCentroTitulacion(List<Centro> centroTitulacion) {
+		this.centroTitulacion = centroTitulacion;
+	}
+
+	public List<Grupo> getGrupoTitulacion() {
+		return grupoTitulacion;
+	}
+
+	public void setGrupoTitulacion(List<Grupo> grupoTitulacion) {
+		this.grupoTitulacion = grupoTitulacion;
 	}
 	
-	//ToString
+	
+	//toString
+	
+
 	@Override
 	public String toString() {
-		return "Titulacion [codigo=" + codigo + ", nombre=" + nombre + ", creditos=" + creditos + ", asignaturas="
-				+ asignaturas + ", expedientes=" + expedientes + "]";
+		return "Titulacion [codigo=" + codigo + ", nombre=" + nombre + ", creditos=" + creditos
+				+ ", asignaturaTitulacion=" + asignaturaTitulacion + ", expedienteTitulacion=" + expedienteTitulacion
+				+ ", centroTitulacion=" + centroTitulacion + ", grupoTitulacion=" + grupoTitulacion + "]";
 	}
 	
+	
 	//HashCode & Equals
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

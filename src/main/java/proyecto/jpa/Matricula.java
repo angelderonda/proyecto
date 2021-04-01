@@ -32,8 +32,8 @@ public class Matricula {
 	private Expediente expedienteMatricula;
 	
 	//Relacion uno a muchos con asignaturaMatricula
-	@OneToMany(mappedBy="asignaturaMatricula")
-	private List<AsignaturasMatricula> asignaturasMatriculas;
+	@OneToMany(mappedBy="matriculaAsignaturasMatricula")
+	private List<AsignaturasMatricula> asignaturasMatriculaMatricula;
 	
 	//Getters y Setters
 
@@ -93,15 +93,15 @@ public class Matricula {
 		this.expedienteMatricula = expedienteMatricula;
 	}
 
-	public List<AsignaturasMatricula> getAsignaturasMatriculas() {
-		return asignaturasMatriculas;
+	public List<AsignaturasMatricula> getAsignaturasMatriculaMatricula() {
+		return asignaturasMatriculaMatricula;
 	}
 
-	public void setAsignaturasMatriculas(List<AsignaturasMatricula> asignaturasMatriculas) {
-		this.asignaturasMatriculas = asignaturasMatriculas;
+	public void setAsignaturasMatriculaMatricula(List<AsignaturasMatricula> asignaturasMatriculaMatricula) {
+		this.asignaturasMatriculaMatricula = asignaturasMatriculaMatricula;
 	}
 	
-	//ToString
+	//toString
 	
 	@Override
 	public String toString() {
@@ -112,6 +112,8 @@ public class Matricula {
 	
 	//HashCode & Equals
 	
+	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -166,12 +168,5 @@ public class Matricula {
 			return false;
 		return true;
 	}
-
-	
-	
-	
-	
-	
-
 	
 }

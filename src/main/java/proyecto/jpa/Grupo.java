@@ -40,8 +40,8 @@ public class Grupo  {
 	private List<Clase> clasesGrupo;
 	
 	//Relacion uno a muchos con Asignaturas_Matricula
-	@OneToMany(mappedBy="grupoAsignaturaMatricula")
-	private List<AsignaturasMatricula> asignaturaMatriculaGrupo;
+	@OneToMany(mappedBy="grupoAsignaturasMatricula")
+	private List<AsignaturasMatricula> asignaturasMatriculaGrupo;
 	
 	//Relacion uno a muchos con gruposAsignatura
 	@OneToMany(mappedBy="grupoGruposAsignatura")

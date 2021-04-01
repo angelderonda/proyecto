@@ -1,14 +1,8 @@
 package proyecto.jpa;
+import java.util.List;
+
 import javax.persistence.*;
 
-
-
-/*
- * ManytoMany con Encuesta
- * ManytoOne con 
- * ManytoOne con 
- * 
- */
 
 @Entity
 public class GruposAsignatura {
@@ -21,7 +15,7 @@ public class GruposAsignatura {
 	
 	//Relacion muchos a muchos con encuesta REVISAR!!!
 	@ManyToMany
-	private Encuesta encuestaGruposAsignatura;
+	private List<Encuesta> encuestaGruposAsignatura;
 	
 	
 	//Relacion muchos a uno con grupo
@@ -31,6 +25,7 @@ public class GruposAsignatura {
 	//Relacion muchos a uno con asignatura
 	@ManyToOne(optional = false)
 	private Asignatura asignaturaGruposAsignatura;
+	
 	
 	//Getters and Setters
 	

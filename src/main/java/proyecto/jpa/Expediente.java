@@ -29,21 +29,22 @@ public class Expediente {
 
 	// Relacion muchos a uno con titulacion
 	@ManyToOne(optional = false)
-	private Titulacion titulacionExp;
+	private Titulacion titulacionExpediente;
 
 	// Relacion muchos a uno con Alumnos
 	@ManyToOne(optional = false)
-	private Alumno alumnoExp;
+	private Alumno alumnoExpediente;
 
 	//Relacion uno a muchos con Encuesta
 	@OneToMany(mappedBy = "expedienteEncuesta")
-	private List<Encuesta> encuestas;
+	private List<Encuesta> encuestaExpediente;
 	
 	// Relacion uno a muchos con Matricula
 	@OneToMany(mappedBy = "expedienteMatricula")
-	private List<Matricula> matriculas;
+	private List<Matricula> matriculaExpediente;
 
 	//Getters y Setters
+	
 	public Long getNumeroExpediente() {
 		return numeroExpediente;
 	}
@@ -124,49 +125,54 @@ public class Expediente {
 		this.creditosTF = creditosTF;
 	}
 
-	public Titulacion getTitulacionExp() {
-		return titulacionExp;
+	public Titulacion getTitulacionExpediente() {
+		return titulacionExpediente;
 	}
 
-	public void setTitulacionExp(Titulacion titulacionExp) {
-		this.titulacionExp = titulacionExp;
+	public void setTitulacionExpediente(Titulacion titulacionExpediente) {
+		this.titulacionExpediente = titulacionExpediente;
 	}
 
-	public Alumno getAlumnoExp() {
-		return alumnoExp;
+	public Alumno getAlumnoExpediente() {
+		return alumnoExpediente;
 	}
 
-	public void setAlumnoExp(Alumno alumnoExp) {
-		this.alumnoExp = alumnoExp;
+	public void setAlumnoExpediente(Alumno alumnoExpediente) {
+		this.alumnoExpediente = alumnoExpediente;
 	}
 
-	public List<Encuesta> getEncuestas() {
-		return encuestas;
+	public List<Encuesta> getEncuestaExpediente() {
+		return encuestaExpediente;
 	}
 
-	public void setEncuestas(List<Encuesta> encuestas) {
-		this.encuestas = encuestas;
+	public void setEncuestaExpediente(List<Encuesta> encuestaExpediente) {
+		this.encuestaExpediente = encuestaExpediente;
 	}
 
-	public List<Matricula> getMatriculas() {
-		return matriculas;
+	public List<Matricula> getMatriculaExpediente() {
+		return matriculaExpediente;
 	}
 
-	public void setMatriculas(List<Matricula> matriculas) {
-		this.matriculas = matriculas;
+	public void setMatriculaExpediente(List<Matricula> matriculaExpediente) {
+		this.matriculaExpediente = matriculaExpediente;
 	}
+	
 
-	//ToString
+	//toString
+	
 	@Override
 	public String toString() {
 		return "Expediente [numeroExpediente=" + numeroExpediente + ", activo=" + activo + ", notaMediaProvisional="
 				+ notaMediaProvisional + ", creditosSuperados=" + creditosSuperados + ", creditosFB=" + creditosFB
 				+ ", creditosMO=" + creditosMO + ", creditosOP=" + creditosOP + ", creditosCF=" + creditosCF
-				+ ", creditosPE=" + creditosPE + ", creditosTF=" + creditosTF + ", titulacionExp=" + titulacionExp
+				+ ", creditosPE=" + creditosPE + ", creditosTF=" + creditosTF + ", titulacionExp=" + titulacionExpediente
 				+ "]";
 	}
 	
 	//HashCode and Equals
+	
+	
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -191,8 +197,7 @@ public class Expediente {
 			return false;
 		return true;
 	}
-	
-	
+		
 
 }
 

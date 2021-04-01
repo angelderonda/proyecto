@@ -21,19 +21,19 @@ public class Asignatura {
 	
 	//Relacion muchos a uno con titulacion
 	@ManyToOne(optional = false)
-	private Titulacion titulacionAsig;
+	private Titulacion titulacionAsignatura;
 	
 	//Relacion uno a muchos con clase
 	@OneToMany(mappedBy="asignaturaClase")
-	private List<Clase> clasesAsig;
+	private List<Clase> claseAsignatura;
 
-	//Relacion uno a muchos con grupoAsignatura
-	@OneToMany(mappedBy="asignaturaGrupo")
-	private List<GruposAsignatura> gruposAsignaturaAsig;
+	//Relacion uno a muchos con gruposAsignatura
+	@OneToMany(mappedBy="asignaturaGruposAsignatura")
+	private List<GruposAsignatura> gruposAsignaturaAsignatura;
 		
-	//Relacion uno a muchos con matricula
-	@OneToMany(mappedBy="asignaturaMatricula")
-	private List<AsignaturasMatricula> asignaturasMatriculas;
+	//Relacion uno a muchos con asignaturaMatricula
+	@OneToMany(mappedBy="asignaturaAsignaturasMatricula")
+	private List<AsignaturasMatricula> asignaturasMatriculaAsignatura;
 
 	//Getters and Setters
 	
@@ -41,109 +41,159 @@ public class Asignatura {
 		return referencia;
 	}
 
+
+
 	public void setReferencia(Long referencia) {
 		this.referencia = referencia;
 	}
+
+
 
 	public Integer getCodigo() {
 		return codigo;
 	}
 
+
+
 	public void setCodigo(Integer codigo) {
 		this.codigo = codigo;
 	}
+
+
 
 	public Integer getCreditos() {
 		return creditos;
 	}
 
+
+
 	public void setCreditos(Integer creditos) {
 		this.creditos = creditos;
 	}
+
+
 
 	public Boolean getOfertada() {
 		return ofertada;
 	}
 
+
+
 	public void setOfertada(Boolean ofertada) {
 		this.ofertada = ofertada;
 	}
+
+
 
 	public String getNombre() {
 		return nombre;
 	}
 
+
+
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+
+
 
 	public Integer getCurso() {
 		return curso;
 	}
 
+
+
 	public void setCurso(Integer curso) {
 		this.curso = curso;
 	}
+
+
 
 	public String getTipo() {
 		return tipo;
 	}
 
+
+
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+
+
 
 	public String getDuracion() {
 		return duracion;
 	}
 
+
+
 	public void setDuracion(String duracion) {
 		this.duracion = duracion;
 	}
 
-	public Titulacion getTitulacionAsig() {
-		return titulacionAsig;
+
+
+	public Titulacion getTitulacionAsignatura() {
+		return titulacionAsignatura;
 	}
 
-	public void setTitulacionAsig(Titulacion titulacionAsig) {
-		this.titulacionAsig = titulacionAsig;
+
+
+	public void setTitulacionAsignatura(Titulacion titulacionAsignatura) {
+		this.titulacionAsignatura = titulacionAsignatura;
 	}
 
-	public List<Clase> getClasesAsig() {
-		return clasesAsig;
+
+
+	public List<Clase> getClaseAsignatura() {
+		return claseAsignatura;
 	}
 
-	public void setClasesAsig(List<Clase> clasesAsig) {
-		this.clasesAsig = clasesAsig;
+
+
+	public void setClaseAsignatura(List<Clase> claseAsignatura) {
+		this.claseAsignatura = claseAsignatura;
 	}
 
-	public List<GruposAsignatura> getGruposAsignaturaAsig() {
-		return gruposAsignaturaAsig;
+
+
+	public List<GruposAsignatura> getGruposAsignaturaAsignatura() {
+		return gruposAsignaturaAsignatura;
 	}
 
-	public void setGruposAsignaturaAsig(List<GruposAsignatura> gruposAsignaturaAsig) {
-		this.gruposAsignaturaAsig = gruposAsignaturaAsig;
+
+
+	public void setGruposAsignaturaAsignatura(List<GruposAsignatura> gruposAsignaturaAsignatura) {
+		this.gruposAsignaturaAsignatura = gruposAsignaturaAsignatura;
 	}
 
-	public List<AsignaturasMatricula> getAsignaturasMatriculas() {
-		return asignaturasMatriculas;
+
+
+	public List<AsignaturasMatricula> getAsignaturasMatriculaAsignatura() {
+		return asignaturasMatriculaAsignatura;
 	}
 
-	public void setAsignaturasMatriculas(List<AsignaturasMatricula> asignaturasMatriculas) {
-		this.asignaturasMatriculas = asignaturasMatriculas;
+
+
+	public void setAsignaturasMatriculaAsignatura(List<AsignaturasMatricula> asignaturasMatriculaAsignatura) {
+		this.asignaturasMatriculaAsignatura = asignaturasMatriculaAsignatura;
 	}
+
 	
 	//toString
+		
 	@Override
 	public String toString() {
 		return "Asignatura [referencia=" + referencia + ", codigo=" + codigo + ", creditos=" + creditos + ", ofertada="
 				+ ofertada + ", nombre=" + nombre + ", curso=" + curso + ", tipo=" + tipo + ", duracion=" + duracion
-				+ ", titulacionAsig=" + titulacionAsig + "]";
-	}
-
+				+ ", titulacionAsignatura=" + titulacionAsignatura + ", claseAsignatura=" + claseAsignatura
+				+ ", gruposAsignaturaAsignatura=" + gruposAsignaturaAsignatura + ", asignaturasMatriculaAsignatura="
+				+ asignaturasMatriculaAsignatura + "]";
+	}	
 	
 
 	//HashCode and Equals
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
