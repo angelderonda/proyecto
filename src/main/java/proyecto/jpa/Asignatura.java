@@ -212,7 +212,7 @@ public class Asignatura {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((codigo == null) ? 0 : codigo.hashCode());
+		result = prime * result + ((referencia == null) ? 0 : referencia.hashCode());
 		return result;
 	}
 
@@ -225,10 +225,10 @@ public class Asignatura {
 		if (getClass() != obj.getClass())
 			return false;
 		Asignatura other = (Asignatura) obj;
-		if (codigo == null) {
-			if (other.codigo != null)
+		if (referencia == null) {
+			if (other.referencia != null)
 				return false;
-		} else if (!codigo.equals(other.codigo))
+		} else if (!referencia.equals(other.referencia))
 			return false;
 		return true;
 	}
