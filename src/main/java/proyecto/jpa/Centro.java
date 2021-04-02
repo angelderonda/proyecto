@@ -1,13 +1,9 @@
 package proyecto.jpa;
 
-import java.io.Serializable;
+
 import java.util.List;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 
 @Entity
 public class Centro {
@@ -16,7 +12,7 @@ public class Centro {
 	@Id
 	@Column(name="ID")
 	private Integer id;
-	@Column(name="NOMBRE")
+	@Column(name="NOMBRE", unique = true)
 	private String nombre;
 	@Column(name="DIRECCION")
 	private String direccion;
@@ -24,8 +20,8 @@ public class Centro {
 	private Long telefonoConserjeria;
 	
 	
-	@ManyToMany
-	private List<Titulacion> centroTitulacion;	
+	@ManyToMany(mappedBy = "centroTitulacion")
+	private List<Titulacion> titulacionCentro;	
 	
 	//Getters and Setters
 

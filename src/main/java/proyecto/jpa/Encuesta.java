@@ -13,8 +13,8 @@ public class Encuesta {
 	@Column(name="FECHA_ENVIO")
 	private Date fechaEnvio;
 		
-	@ManyToMany
-	private List<GruposAsignatura> grupoAsignaturaEncuesta;
+	@ManyToMany(mappedBy = "encuestaGruposAsignatura")
+	private List<GruposAsignatura> gruposAsignaturaEncuesta;
 	
 	@ManyToOne(optional = false)
 	private Expediente expedienteEncuesta;
@@ -35,7 +35,7 @@ public class Encuesta {
 	
 	@Override
 	public String toString() {
-		return "Encuesta [fechaEnvio=" + fechaEnvio + ", grupoAsignaturaEncuesta=" + grupoAsignaturaEncuesta
+		return "Encuesta [fechaEnvio=" + fechaEnvio + ", grupoAsignaturaEncuesta=" + gruposAsignaturaEncuesta
 				+ ", expedienteEncuesta=" + expedienteEncuesta + "]";
 	}
 
@@ -49,7 +49,7 @@ public class Encuesta {
 		int result = 1;
 		result = prime * result + ((expedienteEncuesta == null) ? 0 : expedienteEncuesta.hashCode());
 		result = prime * result + ((fechaEnvio == null) ? 0 : fechaEnvio.hashCode());
-		result = prime * result + ((grupoAsignaturaEncuesta == null) ? 0 : grupoAsignaturaEncuesta.hashCode());
+		result = prime * result + ((gruposAsignaturaEncuesta == null) ? 0 : gruposAsignaturaEncuesta.hashCode());
 		return result;
 	}
 
@@ -72,10 +72,10 @@ public class Encuesta {
 				return false;
 		} else if (!fechaEnvio.equals(other.fechaEnvio))
 			return false;
-		if (grupoAsignaturaEncuesta == null) {
-			if (other.grupoAsignaturaEncuesta != null)
+		if (gruposAsignaturaEncuesta == null) {
+			if (other.gruposAsignaturaEncuesta != null)
 				return false;
-		} else if (!grupoAsignaturaEncuesta.equals(other.grupoAsignaturaEncuesta))
+		} else if (!gruposAsignaturaEncuesta.equals(other.gruposAsignaturaEncuesta))
 			return false;
 		return true;
 	}
