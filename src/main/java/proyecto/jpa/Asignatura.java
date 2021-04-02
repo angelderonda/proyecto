@@ -4,6 +4,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+* @author Los Datografos 
+* Clase: Asignatura
+* Esta clase identifica todas las asignaturas ofertadas en el centro (materia que se imparte en las clases) con sus atributos como créditos o duración.
+*/
+
 @Entity
 @Inheritance(strategy=InheritanceType.SINGLE_TABLE)
 @DiscriminatorColumn(name="disc", discriminatorType = DiscriminatorType.CHAR )

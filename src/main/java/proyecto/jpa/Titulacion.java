@@ -3,12 +3,13 @@ package proyecto.jpa;
 import java.util.List;
 
 import javax.persistence.*;
+
 /**
- * 
- * @author Los Datografos
- * Esta clase representa a una de las 4 titulaciones que existen en el sistema, con la posibilidad de 
- * crear alguna mas. 
- */
+* @author Los Datografos 
+* Clase: Titulacion
+* Indica el grado de tipo de estudios en el que hay distintos grupos y está compuesto por muchas asignaturas.
+*/
+
 @Entity
 public class Titulacion {
 	@Id

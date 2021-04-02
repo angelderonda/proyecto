@@ -2,6 +2,12 @@ package proyecto.jpa;
 
 import javax.persistence.*;
 
+/**
+* @author Los Datografos 
+* Clase: Optativa
+* Un subtipo de asignatura que puede darse que no se lleve a impartir en un curso por diversas razones.
+*/
+
 @Entity
 @DiscriminatorValue("O")
 public class Optativa extends Asignatura{

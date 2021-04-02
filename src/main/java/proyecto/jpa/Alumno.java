@@ -4,6 +4,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+* @author Los Datografos 
+* Clase: Alumno
+* Esta clase identifica cada alumno (persona física) e incluye la información personal externa a la docencia.
+*/
+
 @Entity
 public class Alumno{
 

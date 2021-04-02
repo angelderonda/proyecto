@@ -2,6 +2,11 @@ package proyecto.jpa;
 import java.util.List;
 import javax.persistence.*;
 
+/**
+* @author Los Datografos 
+* Clase: Grupo
+* Recoge a un número de alumnos para cada asignatura y existen varios por cada titulación. Además tiene un horario completo asociado.
+*/
 
 @Entity
 public class Grupo  {

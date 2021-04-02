@@ -3,6 +3,13 @@ package proyecto.jpa;
 import java.util.Date;
 import javax.persistence.*;
 
+
+/**
+* @author Los Datografos 
+* Clase: Clase
+* Esta clase indica el tramo horario y dia donde se imparte una asignatura concreto. Varias asignaturas de distintos grupos usan tramo horario simultáneo.
+*/
+
 @Entity
 public class Clase {
 	@EmbeddedId

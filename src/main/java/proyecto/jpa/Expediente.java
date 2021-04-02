@@ -4,6 +4,14 @@ import java.util.List;
 
 import javax.persistence.*;
 
+
+/**
+* @author Los Datografos 
+* Clase: Expediente
+* La forma de identificar al alumno dentro de la universidad. Un alumno tiene un expediente asociado a él (por cada titulación en la que esté).
+*/
+
+
 @Entity
 public class Expediente {
 	@Id

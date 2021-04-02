@@ -6,6 +6,7 @@ import javax.persistence.*;
 /**
  * 
  * @author Los Datografos
+ * Clase: ClaseID
  * Esta clase se usa para poder crear la clave primaria compuesta de Clase. 
  */
 

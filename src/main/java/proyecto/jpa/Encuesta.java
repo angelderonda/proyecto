@@ -1,10 +1,15 @@
 package proyecto.jpa;
 
 import java.util.Date;
+
 import java.util.List;
 
 import javax.persistence.*;
-
+/**
+* @author Los Datografos 
+* Clase: Encuesta
+* Hace referencia a las encuestas de preferencia que los alumnos rellenan con sus asignaturas prioritarias y sus elecciones.
+*/
 
 @Entity
 public class Encuesta {

@@ -3,6 +3,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+* @author Los Datografos 
+* Clase:GruposAsignatura
+* Indica la variación que hay dentro de los grupos para cada asignatura. Todos los alumnos de un grupo no tienen las mismas asignaturas 
+* sino que hay un grupo de alumnos por cada asigntura que puede no coincidir en otras asignaturas.
+*/
 
 @Entity
 public class GruposAsignatura {

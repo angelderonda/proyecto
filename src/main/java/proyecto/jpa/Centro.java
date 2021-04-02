@@ -5,6 +5,12 @@ import java.util.List;
 
 import javax.persistence.*;
 
+/**
+* @author Los Datografos 
+* Clase: Centro
+* Esta clase hace referencia a los centros físicos donde se realiza la docencia dentro de la universidad/facultad.
+*/
+
 @Entity
 public class Centro {
 

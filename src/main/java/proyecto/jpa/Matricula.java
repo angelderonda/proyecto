@@ -3,11 +3,13 @@ package proyecto.jpa;
 import java.util.List;
 
 import javax.persistence.*;
+
 /**
- * 
- * @author Los Datografos
- * Esta clase se emplea para crear las matrículas de los alumnos. 
- */
+* @author Los Datografos 
+* Clase: Matricula
+* Indica la elección del alumnado para turnos y asignaturas.
+*/
+
 @Entity
 public class Matricula {
 	@Id
