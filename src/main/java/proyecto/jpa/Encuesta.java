@@ -10,7 +10,7 @@ import javax.persistence.*;
 public class Encuesta {
 	@Id
 	@Temporal(TemporalType.DATE)
-	@Column(name="FECHA_ENVIO")
+	@Column(name="FECHA_ENVIO", nullable = false)
 	private Date fechaEnvio;
 		
 	@ManyToMany(mappedBy = "encuestaGruposAsignatura")

@@ -10,13 +10,21 @@ import javax.persistence.*;
 @DiscriminatorValue("A")
 public class Asignatura {
 	@Id
+	@Column(name="REFERENCIA", nullable = false)
 	private Long referencia;
+	@Column(name="CODIGO", nullable = false)
 	private Integer codigo;
+	@Column(name="CREDITOS", nullable = false)
 	private Integer creditos;
+	@Column(name="OFERTADA", nullable = false)
 	private Boolean ofertada;
+	@Column(name="NOMBRE", nullable = false)
 	private String nombre;
+	@Column(name="CURSO")
 	private Integer curso;
+	@Column(name="TIPO")
 	private String tipo; //Mat basica, optativa,tfg...
+	@Column(name="DURACION")
 	private String duracion;
 	
 	//Relacion muchos a uno con titulacion

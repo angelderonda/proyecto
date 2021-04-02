@@ -8,7 +8,7 @@ import javax.persistence.*;
 public class GruposAsignatura {
 	
 	@Id
-	@Column(name = "CURSO_ACADEMICO")
+	@Column(name = "CURSO_ACADEMICO", nullable = false)
 	private Integer curso_academico;
 	@Column(name = "OFERTA")	
 	private char oferta;

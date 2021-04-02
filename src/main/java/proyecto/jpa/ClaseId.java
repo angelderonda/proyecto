@@ -11,10 +11,10 @@ import javax.persistence.*;
 
 @Embeddable
 public class ClaseId{
-		@Column(name = "DIA")
+		@Column(name = "DIA", nullable = false)
 		@Temporal(TemporalType.DATE)
 		private Date dia;
-		@Column(name = "HORA_INICIO")
+		@Column(name = "HORA_INICIO", nullable = false)
 		@Temporal(TemporalType.TIME)
 		private Date horaInicio;
 }

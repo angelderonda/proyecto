@@ -7,7 +7,7 @@ import javax.persistence.*;
 @Entity
 public class Expediente {
 	@Id
-	@Column(name = "NUMERO_EXPEDIENTE")
+	@Column(name = "NUMERO_EXPEDIENTE", nullable = false)
 	private Long numeroExpediente;
 	private Boolean activo;
 	@Column(name = "NOTA_MEDIA_PROVISIONAL")

@@ -9,9 +9,9 @@ public class Alumno{
 
 	
 	@Id
-	@Column(name="ID")
+	@Column(name="ID", nullable = false)
 	private Integer id;
-	@Column(name="DNI")
+	@Column(name="DNI", unique = true, nullable = false)
 	private String dni;
 	@Column(name="NOMBRE_COMPLETO")
 	private String nombreCompleto;

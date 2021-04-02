@@ -10,11 +10,11 @@ public class Centro {
 
 	
 	@Id
-	@Column(name="ID")
+	@Column(name="ID", nullable = false)
 	private Integer id;
-	@Column(name="NOMBRE", unique = true)
+	@Column(name="NOMBRE",nullable = false, unique = true)
 	private String nombre;
-	@Column(name="DIRECCION")
+	@Column(name="DIRECCION", nullable = false)
 	private String direccion;
 	@Column(name="TELEFONO_CONSERJERIA")
 	private Long telefonoConserjeria;

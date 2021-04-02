@@ -5,7 +5,7 @@ import javax.persistence.*;
 @Entity
 @DiscriminatorValue("O")
 public class Optativa extends Asignatura{
-	@Column(name = "PLAZAS")
+	@Column(name = "PLAZAS", nullable = false)
 	private Integer plazas;
 	@Column(name = "MENCION")
 	private String mencion;	

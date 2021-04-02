@@ -7,15 +7,15 @@ import javax.persistence.*;
 public class Grupo  {
 	
 	@Id
-	@Column(name = "ID")
+	@Column(name = "ID", nullable = false)
 	private Integer id;
-	@Column(name = "CURSO")
+	@Column(name = "CURSO",nullable = false,unique = true)
 	private Integer curso;
-	@Column(name = "LETRA")
+	@Column(name = "LETRA",nullable = false, unique = true)
 	private char letra;
-	@Column(name = "TURNO_TARDE_MAÑANA")
+	@Column(name = "TURNO_TARDE_MAÑANA", nullable = false)
 	private String turno_mañana_tarde;
-	@Column(name = "INGLES")
+	@Column(name = "INGLES", nullable = false)
 	private Boolean ingles;
 	@Column(name = "VISIBLE")
 	private Boolean visible;

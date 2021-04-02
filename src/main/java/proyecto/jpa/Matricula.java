@@ -11,11 +11,11 @@ import javax.persistence.*;
 @Entity
 public class Matricula {
 	@Id
-	@Column(name = "CURSO_ACADEMICO")
+	@Column(name = "CURSO_ACADEMICO", nullable = false)
 	private Integer cursoAcademico;
-	@Column(name = "ESTADO")
+	@Column(name = "ESTADO", nullable = false)
 	private String estado;
-	@Column(name = "FECHA_MATRICULA")
+	@Column(name = "FECHA_MATRICULA", nullable = false)
 	private String fechaMatricula;
 	@Column(name = "NUMERO_ARCHIVO")
 	private Integer numeroArchivo;

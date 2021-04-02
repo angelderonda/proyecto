@@ -6,7 +6,7 @@ import javax.persistence.*;
 @Entity
 public class Clase {
 	@EmbeddedId
-	@Column(name = "ID")
+	@Column(name = "ID", nullable = false)
 	private ClaseId id;
 	@Column(name = "HORA_FIN")
 	@Temporal(TemporalType.TIME)

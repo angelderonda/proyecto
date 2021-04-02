@@ -12,10 +12,11 @@ import javax.persistence.*;
 @Entity
 public class Titulacion {
 	@Id
-	@Column(name = "CÓDIGO")
+	@Column(name = "CÓDIGO", nullable = false)
 	private Long codigo;
+	@Column(name = "NOMBRE", nullable = false)
 	private String nombre;
-	@Column
+	@Column(name = "CREDITOS", nullable = false)
 	private Integer creditos;
 	
 	//Relacion uno a muchos con asignatura
