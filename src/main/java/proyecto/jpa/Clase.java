@@ -77,9 +77,6 @@ public class Clase {
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
-		result = prime * result + ((asignaturaClase == null) ? 0 : asignaturaClase.hashCode());
-		result = prime * result + ((grupoClase == null) ? 0 : grupoClase.hashCode());
-		result = prime * result + ((horaFin == null) ? 0 : horaFin.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		return result;
 	}
@@ -93,21 +90,6 @@ public class Clase {
 		if (getClass() != obj.getClass())
 			return false;
 		Clase other = (Clase) obj;
-		if (asignaturaClase == null) {
-			if (other.asignaturaClase != null)
-				return false;
-		} else if (!asignaturaClase.equals(other.asignaturaClase))
-			return false;
-		if (grupoClase == null) {
-			if (other.grupoClase != null)
-				return false;
-		} else if (!grupoClase.equals(other.grupoClase))
-			return false;
-		if (horaFin == null) {
-			if (other.horaFin != null)
-				return false;
-		} else if (!horaFin.equals(other.horaFin))
-			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
